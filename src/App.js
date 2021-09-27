@@ -1,13 +1,11 @@
-import React from 'react';
+import React from "react";
+import CandidateContainer from "components/CandidateContainer";
+import "styled-components";
+import { getSyncCandidates } from "data/api";
 
 function App() {
-  return (
-    <header>
-      <p>
-        Edit <code>App.js</code> and save to reload
-      </p>
-    </header>
-  );
+  const data = getSyncCandidates();
+  return <CandidateContainer data={data} />;
 }
 
 export default App;
